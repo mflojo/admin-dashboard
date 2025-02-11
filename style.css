@@ -52,9 +52,22 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
+
+#sidebar h1::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(images/view-dashboard.svg) no-repeat center center;
+    background-size: contain;
+    margin-right: 5px;
+}
+
 li {
     list-style-type: none;
     font-size: 1.5rem;
+    display: flex;
+    gap: 15px;
 }
 
 #header {
@@ -78,25 +91,32 @@ li {
     grid-area: 1 / 1 / 3 / 3;
     justify-content: center;
     align-content: center;
+    display: flex;
+    align-items: center;
 }
 
 input {
-    width: 70%;
+    width: 80%;
     border: 0;
+    margin-left: 10px;
     border-radius: 25px;
     background-color: lightgray;
 }
 
 #right-toolbar {
+    display: flex;
     grid-area: 1 / 3 / 2 / 4;
-    justify-content: center;
+    justify-content:end;
     align-content: center;
+    gap: 20px;
+    align-items: center;
 }
 
 #user-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-area: 2 / 1 / 3 / 4;
+    
 }
 
 #left-user-info {
@@ -206,4 +226,17 @@ p {
 .hover:hover {
 	top: -2px;
 	box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+a {
+    text-decoration: none;
+}
+
+.small-icon {
+    width: 25px;
+    height: auto;
+}
+
+.large-icon {
+    width: 80%;
 }
