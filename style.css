@@ -40,8 +40,6 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 325px repeat(3, 1fr);
     grid-template-rows: 200px repeat(3, 1fr);
-    height: 100vh;
-    width: 100vw;
 }
 
 #sidebar {
@@ -127,9 +125,11 @@ button {
     grid-area: 2 / 2 / 5 / 5;
     background-color: lightgrey;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr) 350px;
     gap: 15px;
     padding: 30px;
+    max-width: 100%;
+    
 }
 
 #projects {
@@ -160,13 +160,50 @@ button {
 }
 
 #right-bar {
-    display: grid;
     grid-area: 1 / 4 / 2 / 5;
-    grid-template-rows: 1fr 1fr;
-    padding: 20px;
+    padding-left: 20px;
 }
 
 #announcements {
-    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.announcement-msg {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+.announcement-msg:last-child {
+    border-bottom: none;
+}
+
+#trending-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.trending-topic {
+    display: flex;
+    gap: 10px;
     align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 70%);
+}
+
+.hover:hover {
+	top: -2px;
+	box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
