@@ -40,6 +40,8 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 325px repeat(3, 1fr);
     grid-template-rows: 200px repeat(3, 1fr);
+    height: 100vh;
+    width: 100vw;
 }
 
 #sidebar {
@@ -124,4 +126,47 @@ button {
 #content {
     grid-area: 2 / 2 / 5 / 5;
     background-color: lightgrey;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 30px;
+}
+
+#projects {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#project-cards {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.cards {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border-left: 8px solid orange;
+}
+
+#card-icons {
+    text-align: end;
+}
+
+#right-bar {
+    display: grid;
+    grid-area: 1 / 4 / 2 / 5;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+
+#announcements {
+    justify-content: center;
+    align-items: center;
 }
